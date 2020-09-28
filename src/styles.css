@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.nav-tabs{
+  border: none;
+}
+
+.nav-tabs>li>a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border:none!important;
+}

@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="row" *ngFor="let item of itemsArray| paginate: {itemsPerPage:1,currentPage:currentPage}; let i = index">
+        <div class="paginat">
+          <p class="text-center">{{currentPage}} / {{itemsArray.length}}</p>
+         <button class="arrowButton"  [disabled]="currentPage==1" (click)="currentPage=currentPage-1"><i class="fas fa-arrow-left fa-2x" ></i></button> &nbsp;
+          <button class="arrowButton" [disabled]="currentPage==itemsArray.length" (click)="currentPage=currentPage+1"><i class="fas fa-arrow-right fa-2x" ></i></button>
+        </div>
+        <div class="paginatValue">
+          <h4>{{item.label}}</h4>
+          <p>{{item.sample}} . {{item.value}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 text-right">
+      <div class="row">
+        <div class="iconsMove" (click)="changeState()">
+          <label class="mr-3">{{iconsData.status}}</label><br/>
+          <i class="fas fa-heart fa-2x mr-3"
+             [ngClass]="{
+             'solids':count===0,
+             'active':count===1,
+             'active-rounded':count===2,
+             'fades':count===3
+
+             }"></i>
+        </div>
+
+        <div class="iconsMove" (click)="changeState1()">
+          <label class="mr-3">{{iconsData.share}}</label><br/>
+          <i class="fas fa-share-alt fa-2x mr-3"
+             [ngClass]="{
+             'solids':count1===0,
+             'active':count1===1,
+             'active-rounded':count1===2,
+             'fades':count1===3
+
+             }"></i>
+        </div>
+        <div class="iconsMove " (click)="changeState2()">
+          <label class="mr-3">{{iconsData.filter}}</label><br/>
+          <i class="fas fa-filter fa-2x mr-3"
+             [ngClass]="{
+             'solids':count2===0,
+             'active':count2===1,
+             'active-rounded':count2===2,
+             'fades':count2===3
+
+             }"></i>
+        </div>
+        <div class="iconsMove" (click)="changeState3()">
+          <label class="mr-3">{{iconsData.calender}}</label><br/>
+          <i class="far fa-calendar fa-2x mr-3"
+             [ngClass]="{
+             'solids':count3===0,
+             'active':count3===1,
+             'active-rounded':count3===2,
+             'fades':count3===3
+
+             }"></i>
+        </div>
+        <div class="text-center mt-4">
+          <label>{{iconsData.data}}</label><br/>
+            <i class="fas fa-download fa-2x mr-4"></i>
+            <i class="fas fa-upload fa-2x mr-4"></i>
+            <i class="fas fa-sync-alt fa-2x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <hr/>

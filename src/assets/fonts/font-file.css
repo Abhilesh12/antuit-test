@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Nunito-Black";
+  src: url("./Nunito-Black.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Nunito-Light";
+  src: url("./Nunito-Light.ttf") format("opentype");
+}
+
+h4{
+  font-family: Nunito-Black;
+}
+p{
+  font-family: Nunito-light;
+
+}
+label{
+  font-family: Nunito-light;
+
+}
+select{
+  font-family: Nunito-light;
+}
+
+

@@ -1,0 +1,21 @@
+
+
+body {
+  font-family: 'appfont', sans-serif;
+}
+
+
+.headrIcon{
+  float: right;
+  margin:10px 20px 0px 0px;
+}
+.fa-bars{
+  margin: 10px;
+}
+select{
+  border: none;
+}
+
+.tabsClass{
+  background-color: red;
+}

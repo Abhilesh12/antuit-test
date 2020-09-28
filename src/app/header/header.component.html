@@ -1,0 +1,28 @@
+
+<div class="container-fluid">
+  <i class="fas fa-bars fa-2x"></i>
+  <i class="fas fa-ellipsis-v fa-2x headrIcon"></i>
+  <i class="fas fa-user-circle fa-2x headrIcon"></i>
+  <i class="fas fa-bell fa-2x headrIcon"></i>
+</div> <hr/>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+      <tabset>
+        <tab *ngFor="let tabz of tabsArray"  [active]="tabz.active" (selectTab)="redirectTo($event)" [heading]="tabz.label"></tab>
+      </tabset>
+    </div>
+    <div class="col-md-4 text-right">
+      <select>
+        <option [value]="dropValue.value" *ngFor="let dropValue of dropDowns">{{dropValue.value}}</option>
+      </select>
+    </div>
+  </div>
+</div><hr/>
+<app-toolbar></app-toolbar>
+
+
+
+
+
+
